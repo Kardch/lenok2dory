@@ -95,9 +95,9 @@ apktool -q d -s -f -p temp/framedir/ -o temp/lenok-ClockworkSettings/ extract/le
 echo
 echo "***** Patching lenok's system... *****"
 echo
-sudo mkdir extract/lenok/app/HomeButton
-sudo cp patch/app/HomeButtonv3.apk extract/lenok/app/HomeButton
-sudo chmod 644 extract/lenok/app/HomeButton/HomeButtonv3.apk
+sudo mkdir extract/lenok/priv-app/HomeButton
+sudo cp patch/app/HomeButtonv3.apk extract/lenok/priv-app/HomeButton
+sudo chmod 644 extract/lenok/priv-app/HomeButton/HomeButtonv3.apk
 sudo cp patch/media/bootanimation.zip extract/lenok/media/
 sudo cp patch/fonts/ exctract/lenok/fonts/
 sudo chown root:root extract/lenok/fonts/
