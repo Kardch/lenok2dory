@@ -3,7 +3,8 @@ Patcher for LG G Watch R's system to make it work on LG G Watch (basically Andro
 
 Requirements:
 - Linux or WSL2
-- Apktool (if not installed intstall with "sudo apt install apktool"
+- Apktool (if not installed do "sudo apt install apktool")
+- Zipalgin (if not installed do "sudo apt install zipalign")
 - Both system images from LG G Watch R (lenok) and LG G Watch (dory), place them respectively inside lenok2dory/images/lenok and lenok2dory/images/dory
 - Time
 
