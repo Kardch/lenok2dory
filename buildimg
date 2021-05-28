@@ -102,7 +102,7 @@ sudo cp patch/media/bootanimation.zip extract/lenok/media/
 sudo cp patch/fonts/ exctract/lenok/fonts/
 sudo chown root:root extract/lenok/fonts/
 sudo chown root:root extract/lenok/media/bootanimation.zip
-sudo chown root:root extract/lenok/app/HomeButton/HomeButtonv3.apk
+sudo chown root:root extract/lenok/priv-app/HomeButton/HomeButtonv3.apk
 
 sudo patch -p0 -l -i patch/dory.patch
 # Disable checking certs for shared system apps
