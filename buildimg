@@ -95,9 +95,14 @@ apktool -q d -s -f -p temp/framedir/ -o temp/lenok-ClockworkSettings/ extract/le
 echo
 echo "***** Patching lenok's system... *****"
 echo
-
+sudo mkdir extract/lenok/app/HomeButton
+sudo cp patch/app/HomeButtonv3.apk extract/lenok/app/HomeButton
+sudo chmod 644 extract/lenok/app/HomeButton/HomeButtonv3.apk
 sudo cp patch/media/bootanimation.zip extract/lenok/media/
+sudo cp patch/fonts/ exctract/lenok/fonts/
+sudo chown root:root extract/lenok/fonts/
 sudo chown root:root extract/lenok/media/bootanimation.zip
+sudo chown root:root extract/lenok/app/HomeButton/HomeButtonv3.apk
 
 sudo patch -p0 -l -i patch/dory.patch
 # Disable checking certs for shared system apps
@@ -145,7 +150,6 @@ sudo cp -a dory/lib/hw/lis3dsh_tilt.so lenok/lib/hw/
 sudo cp -a dory/lib/hw/power.dory.so lenok/lib/hw/
 sudo cp -a dory/lib/hw/sensors.dory.so lenok/lib/hw/
 sudo cp -a dory/lib/hw/sensors.invensense.so lenok/lib/hw/
-# sudo cp -a dory/media/bootanimation.zip lenok/media/
 sudo cp -ar dory/vendor/firmware/ lenok/vendor/
 popd
 
@@ -154,9 +158,9 @@ echo
 echo "***** Making system image... *****"
 echo
 # sudo env "PATH=$PATH" mksquashfsimage.sh extract/lenok system4dory.img -s -m /system -c file_contexts
-sudo prebuilt/mksquashfs extract/lenok/ system4dory.img -comp lz4 -b 131072 -no-exports -noappend -no-fragments -no-duplicates \
+sudo prebuilt/mksquashfs extract/lenok/ newdory.img -comp lz4 -b 131072 -no-exports -noappend -no-fragments -no-duplicates \
 -android-fs-config -context-file file_contexts -mount-point /system
-sudo chmod 777 system4dory.img
+sudo chmod 777 newdory.img
 
 popd
 
