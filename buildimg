@@ -99,7 +99,7 @@ sudo mkdir extract/lenok/priv-app/HomeButton
 sudo cp patch/app/HomeButtonv3.apk extract/lenok/priv-app/HomeButton
 sudo chmod 644 extract/lenok/priv-app/HomeButton/HomeButtonv3.apk
 sudo cp patch/media/bootanimation.zip extract/lenok/media/
-sudo cp patch/fonts/ exctract/lenok/fonts/
+sudo cp -r patch/fonts/ exctract/lenok/fonts/
 sudo chown root:root extract/lenok/fonts/
 sudo chown root:root extract/lenok/media/bootanimation.zip
 sudo chown root:root extract/lenok/priv-app/HomeButton/HomeButtonv3.apk
