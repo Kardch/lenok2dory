@@ -8,12 +8,12 @@ Requirements:
 - Time
 
 Building:
-Navigate to lenok2dory directory
-Open a terminal there and run "sudo ./buildimg"
-  To open a terminal on linux systems: Shift+RightClick > E
-  To open a terminal on windows systems: Shift+RightClick > choose Open Linux Terminal Here
-Chill out (building will take some time)
-Profit??
+- Navigate to lenok2dory directory
+- Open a terminal there and run "sudo ./buildimg"
+  - To open a terminal on linux systems: Shift+RightClick > E
+  - To open a terminal on windows systems: Shift+RightClick > choose Open Linux Terminal Here
+- Chill out (building will take some time)
+- Profit??
 
 Changelog:
 - Replaced Roboto fonts with Google Sans
